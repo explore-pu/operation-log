@@ -1,0 +1,37 @@
+{
+    "name": "pucoder/operation-log",
+    "description": "operation-log extension of laravel-admin",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension", "operation-log"],
+    "homepage": "https://github.com/pucoder/operation-log",
+    "license": "MIT",
+    "version": "v1.0.0",
+    "authors": [
+        {
+            "name": "xiaozhi",
+            "email": "xiaozhi2015@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "pucoder/laravel-admin": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Encore\\OperationLog\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Encore\\OperationLog\\OperationLogServiceProvider"
+            ]
+        }
+    }
+}
