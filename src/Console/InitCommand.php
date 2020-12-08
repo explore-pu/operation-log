@@ -62,6 +62,8 @@ class InitCommand extends Command
                 'icon' => 'fas fa-history',
                 'uri' => 'admin_logs',
             ]);
+
+            $this->info('Initialization successful');
         }
     }
 }
