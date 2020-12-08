@@ -16,3 +16,27 @@ if (!function_exists('admin_route_trans')) {
         return implode('.', $trans);
     }
 }
+
+if (!function_exists('admin_restore_route')) {
+    /**
+     * 恢复路由名称（去掉路由名称的前缀as）
+     *
+     * @param $name
+     * @return string
+     */
+    function admin_restore_route($name)
+    {
+        if ($route_as = config('admin.route.as')) {
+            $route = [];
+            foreach (explode('.', $name) as $route_key => $route_value) {
+                if ($route_key !== 0 && $route_value !== $route_as) {
+                    $route[] = $route_value;
+                }
+            }
+
+            return implode('.', $route);
+        }
+
+        return $name;
+    }
+}
