@@ -17,6 +17,26 @@ if (!function_exists('admin_route_trans')) {
     }
 }
 
+if (!function_exists('admin_restore_path')) {
+    /**
+     * 恢复路由地址（去掉路由前缀prefix）
+     *
+     * @param string $path
+     * @return string
+     */
+    function admin_restore_path($path = '')
+    {
+        $new_path = [];
+        foreach (explode('/', $path) as $value) {
+            if ($value !== config('admin.route.prefix')) {
+                array_push($new_path, $value);
+            }
+        }
+
+        return $new_path ? implode('/', $new_path) : '/';
+    }
+}
+
 if (!function_exists('admin_restore_route')) {
     /**
      * 恢复路由名称（去掉路由名称的前缀as）
