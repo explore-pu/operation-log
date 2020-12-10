@@ -5,7 +5,6 @@
     "keywords": ["laravel-admin", "extension", "operation-log"],
     "homepage": "https://github.com/pucoder/operation-log",
     "license": "MIT",
-    "version": "v1.0.0",
     "authors": [
         {
             "name": "xiaozhi",
