@@ -13,7 +13,7 @@ class OperationLogController extends AdminController
      */
     public function title()
     {
-        return trans('admin.admin_logs');
+        return trans('admin.auth_logs');
     }
 
     /**
@@ -36,7 +36,7 @@ class OperationLogController extends AdminController
             return '<span class="badge bg-' . $color . '">' . $method . '</span>';
         });
         $table->column('path', trans('admin.path'))->label('info');
-        $table->column('ip', trans('admin.ip'))->label('primary');
+        $table->column('ip', trans('admin.ip'))->label('info');
         $table->column('input', trans('admin.input'))->display(function () {
             return trans('admin.view');
         })->modal(trans('admin.view') . trans('admin.input'), function ($modal) {

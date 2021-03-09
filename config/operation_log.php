@@ -13,7 +13,7 @@ return [
 
     'excepts' => [
         "_require_config",
-        "admin_logs",
-//        "admin_logs/*",
+        "auth_logs",
+//        "auth_logs/*",
     ]
 ];

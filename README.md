@@ -1,7 +1,10 @@
 # operation-log extension for laravel-admin 2.x
 
+> 如果出现语言翻译问题，请添加对应翻译即可
+
 ## 预览图
 > 如果无法显示预览图，请搜“GitHub无法显示图片”解决
+
 ![operation_log_legend](resources/assets/legend.png)
 
 ## 安装扩展
@@ -21,5 +24,3 @@ php artisan vendor:publish --provider="Encore\OperationLog\OperationLogServicePr
 ```shell script
 php artisan operation-log:init
 ```
-
-

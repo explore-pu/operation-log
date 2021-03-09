@@ -52,15 +52,15 @@ class InitCommand extends Command
         $this->call('migrate');
 
         // 如果不存在角色菜单，创建一个
-        if (!Menu::query()->where('uri', 'admin_logs')->exists()) {
+        if (!Menu::query()->where('uri', 'auth_logs')->exists()) {
             // 创建菜单项
             $lastOrder = Menu::query()->max('order');
             Menu::query()->create([
-                'parent_id' => 0,
+                'parent_id' => 2,
                 'order' => $lastOrder++,
-                'title' => trans('admin.admin_logs'),
+                'title' => trans('admin.auth_logs'),
                 'icon' => 'fas fa-history',
-                'uri' => 'admin_logs',
+                'uri' => 'auth_logs',
             ]);
 
             $this->info('Initialization successful');
